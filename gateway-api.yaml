@@ -1,0 +1,16 @@
+apiVersion: component.infrared.reddit.com/v1alpha1
+kind: FederatedClusterComponentSet
+metadata:
+  name: gateway-api-crds
+spec:
+  federationRefs:
+    - portal-transporter
+  clusterComponentSet:
+    components:
+      - kustomize:
+          owner: reddit-go
+          repo: infrared-crds
+          branch: main
+          path: manifests/crd/gateway-api
+        semver: "<1.0"
+        allowDuplicates: true
