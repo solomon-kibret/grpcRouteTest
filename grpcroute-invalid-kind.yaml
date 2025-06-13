@@ -1,7 +1,7 @@
 apiVersion: gateway.networking.k8s.io/v1
 kind: GRPCRoute
 metadata:
-  name: grpcroute-missing-backend
+  name: grpcroute-invalid-kind
 spec:
   parentRefs:
   - group: gateway.networking.k8s.io
