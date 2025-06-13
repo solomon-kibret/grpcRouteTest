@@ -1,0 +1,9 @@
+apiVersion: gateway.networking.k8s.io/v1
+kind: GRPCRoute
+metadata:
+  name: grpcroute-missing-parent
+spec:
+  rules:
+    - backendRefs:
+        - name: existing-backend
+          port: 1234
