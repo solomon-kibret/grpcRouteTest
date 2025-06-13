@@ -1,0 +1,15 @@
+apiVersion: gateway.networking.k8s.io/v1
+kind: GRPCRoute
+metadata:
+  name: grpcroute-missing-backend
+spec:
+  parentRefs:
+  - group: gateway.networking.k8s.io
+    kind: Gateway
+    name: portaltransporter
+    port: 9091
+  rules:
+  - backendRefs:
+      - name: backend-name
+        kind: InvalidKind
+        port: 1234
