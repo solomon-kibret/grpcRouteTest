@@ -5,11 +5,12 @@ metadata:
   namespace: default
 spec:
   parentRefs:
-    - name: contour-test-gateway
-      kind: Gateway
-      group: gateway.networking.k8s.io
-      port: 9000
+  - group: gateway.networking.k8s.io
+    kind: Gateway
+    name: portaltransporter
+    port: 9091
   rules:
-    - backendRefs:
-        - name: real-backend
-          port: 9001
+  - backendRefs:
+      - name: real-backend
+        namespace: other-namespace # <- must NOT exist or must lack a ReferenceGrant
+        port: 9001
