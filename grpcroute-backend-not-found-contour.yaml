@@ -1,0 +1,14 @@
+apiVersion: gateway.networking.k8s.io/v1
+kind: GRPCRoute
+metadata:
+  name: grpcroute-backend-not-found
+spec:
+  parentRefs:
+    - name: contour-test-gateway
+      kind: Gateway
+      group: gateway.networking.k8s.io
+      port: 9000
+  rules:
+    - backendRefs:
+        - name: does-not-exist
+          port: 9001
