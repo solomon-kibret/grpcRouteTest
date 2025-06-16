@@ -1,0 +1,16 @@
+apiVersion: gateway.networking.k8s.io/v1
+kind: GRPCRoute
+metadata:
+  name: grpcroute-cross-ns-no-refgrant
+  namespace: default
+spec:
+  parentRefs:
+    - name: contour-test-gateway
+      kind: Gateway
+      group: gateway.networking.k8s.io
+      port: 9000
+  rules:
+    - backendRefs:
+        - name: real-backend
+          namespace: other-namespace # <- must NOT exist or must lack a ReferenceGrant
+          port: 9001
