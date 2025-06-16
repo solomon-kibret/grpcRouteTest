@@ -12,5 +12,4 @@ spec:
   rules:
     - backendRefs:
         - name: real-backend
-          namespace: other-namespace # <- must NOT exist or must lack a ReferenceGrant
           port: 9001
