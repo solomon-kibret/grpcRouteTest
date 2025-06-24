@@ -11,5 +11,4 @@ spec:
   rules:
   - backendRefs:
       - name: backend-name
-        kind: InvalidKind
         port: 1234
