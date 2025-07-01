@@ -11,7 +11,7 @@ spec:
     version: v1
   supportedPolicies:
     - clientSideWeightedRoundRobinPolicy:
-        blackoutPeriod: -10s                # Negative duration, likely invalid
+        blackoutPeriod: 0                # Negative duration, likely invalid
         errorUtilizationPenalty: '999999'   # Possible unrealistic value
         weightExpirationPeriod: 3m
         weightUpdatePeriod: 1s
