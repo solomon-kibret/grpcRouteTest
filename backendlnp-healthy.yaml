@@ -1,0 +1,28 @@
+# Based off this: https://kube-web-view.build.ue1.snooguts.net/clusters/prod-3-d/namespaces/ingress-probe-responder/backendlbpolicies/ingress-probe-responder-grpc?
+apiVersion: portaltransporter.infrared.reddit.com/v1alpha1
+kind: BackendLBPolicies
+metadata:
+  generation: 1
+  name: example
+spec:
+  backendRef:
+    group: ''
+    kind: Service
+    name: ingress-probe-responder-grpc
+    version: v1
+  supportedPolicies:
+  - clientSideWeightedRoundRobinPolicy:
+      blackoutPeriod: 10s
+      errorUtilizationPenalty: '0'
+      weightExpirationPeriod: 3m
+      weightUpdatePeriod: 1s
+status:
+  parents:
+  - conditions:
+    - lastTransitionTime: '2025-06-03T19:57:10Z'
+      message: Accepted(transport.infrared.reddit.com/portal-transporter)
+      observedGeneration: 1
+      reason: Reconciled
+      status: 'True'
+      type: Available
+    controllerName: transport.infrared.reddit.com/portal-transporter
