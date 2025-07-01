@@ -16,13 +16,3 @@ spec:
       errorUtilizationPenalty: '0'
       weightExpirationPeriod: 3m
       weightUpdatePeriod: 1s
-status:
-  parents:
-  - conditions:
-    - lastTransitionTime: '2025-06-03T19:57:10Z'
-      message: Accepted(transport.infrared.reddit.com/portal-transporter)
-      observedGeneration: 1
-      reason: Reconciled
-      status: 'True'
-      type: Available
-    controllerName: transport.infrared.reddit.com/portal-transporter

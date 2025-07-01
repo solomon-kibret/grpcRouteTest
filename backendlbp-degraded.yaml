@@ -16,13 +16,3 @@ spec:
       errorUtilizationPenalty: '0'
       weightExpirationPeriod: 3m
       weightUpdatePeriod: 1s
-status:
-  parents:
-  - conditions:
-    - lastTransitionTime: '2025-06-03T19:57:10Z'
-      message: "backendRef.kind 'invalid' is not a supported kind (only 'Service' allowed)" 
-      observedGeneration: 1
-      reason: NotReconciled
-      status: 'False'
-      type: Available
-    controllerName: transport.infrared.reddit.com/portal-transporter
