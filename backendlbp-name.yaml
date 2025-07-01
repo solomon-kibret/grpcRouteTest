@@ -1,0 +1,18 @@
+# Modified version of health. Guessing this will degraded but limited api information.
+apiVersion: portaltransporter.infrared.reddit.com/v1alpha1
+kind: BackendLBPolicies
+metadata:
+  generation: 1
+  name: blbp-invalidKind
+spec:
+  backendRef:
+    group: ''
+    kind: Service
+    name: doesnt-exist
+    version: v1
+  supportedPolicies:
+  - clientSideWeightedRoundRobinPolicy:
+      blackoutPeriod: 10s
+      errorUtilizationPenalty: '0'
+      weightExpirationPeriod: 3m
+      weightUpdatePeriod: 1s
