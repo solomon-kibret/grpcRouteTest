@@ -1,7 +1,7 @@
 apiVersion: portaltransporter.infrared.reddit.com/v1alpha1
 kind: BackendLBPolicies
 metadata:
-  name: blbp-invalid-policy
+  name: blbp-invalidpolicy
   namespace: default
 spec:
   backendRef:
