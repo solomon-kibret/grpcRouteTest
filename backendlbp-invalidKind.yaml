@@ -3,7 +3,7 @@ apiVersion: portaltransporter.infrared.reddit.com/v1alpha1
 kind: BackendLBPolicies
 metadata:
   generation: 1
-  name: blbp-invalidKind
+  name: blbp-invalidkind
 spec:
   backendRef:
     group: ''
