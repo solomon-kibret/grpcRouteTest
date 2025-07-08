@@ -2,7 +2,7 @@
 apiVersion: portaltransporter.infrared.reddit.com/v1alpha1
 kind: ManagedGRPCRetryPolicy
 metadata:
-  name: broken-retrypolicy
+  name: retrypolicy-reason
 spec:
   attempts: 2
   backoff: 10s
