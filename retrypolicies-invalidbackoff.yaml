@@ -5,6 +5,6 @@ metadata:
   name: retrypolicy-backoff
 spec:
   attempts: 2
-  backoff: -1s
+  backoff: 9999h
   reasons:
     - UNAVAILABLE
