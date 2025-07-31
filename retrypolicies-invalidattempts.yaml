@@ -4,7 +4,7 @@ kind: ManagedGRPCRetryPolicy
 metadata:
   name: retrypolicy-attempts
 spec:
-  attempts: -1
+  attempts: 1s
   backoff: 10s
   reasons:
     - UNAVAILABLE
