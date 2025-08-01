@@ -16,4 +16,3 @@ spec:
       namespace: authorizer
       port: 9091
       weight: 1
-    name: rule-authorizer-1
